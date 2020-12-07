@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron"/>
+    <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'>
+    <link rel="stylesheet" href="stylee.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+<div class="header-bar">
+  <h1>Tuesday, September 8 2020</h1>
+  <h1 class="status">Status: Clocked Out</h1>
+</div>
+
+<div class="dashboard">
+
+  <div class="clock-wrap">
+    <div class="clock">
+      <div class="display"></div>
+      <input type="button" class="clock-in-btn" name="" value="Clock In">
+    </div>
+  </div>
+
+  <div class="payperiod">
+    <table>
+      <tr>
+        <td>Range</td>
+        <td>9/1/20 - 9/15/20</td>
+      </tr>
+      <tr>
+        <td>Standard Hours</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>Worked So Far</td>
+        <td>32</td>
+      </tr>
+      <tr>
+        <td>Left To Go</td>
+        <td>48</td>
+      </tr>
+      <tr>
+      <td>Charge Code</td>
+      <td>
+        0000-23452-lksdfj
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </td>
+      <tr>
+        <td>Sick Balance</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Leave Balance</td>
+        <td>24</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+
+
+
+</div>
+
+<script>
+setInterval(function(){
+  const clock = document.querySelector('.display');
+  let time = new Date();
+  let sec = time.getSeconds();
+  let min = time.getMinutes() < 10 ? '0' : '' + time.getMinutes();
+  let hr = time.getHours();
+  clock.textContent = hr + ":" + min + ":" + sec;
+});
+</script>
+
+<script>
+
+  let myChart = document.getElementById('myChart').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#c6f4f9';
+
+    let massPopChart = new Chart(myChart, {
+      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        datasets:[{
+          label:'Population',
+          data:[
+            8.0,
+            7.25,
+            9.0,
+            7,
+            3.75,
+            10,
+          ],
+          //backgroundColor:'green',
+          backgroundColor:[
+            "#c6f4f9"
+          ],
+          borderWidth:1,
+          borderColor:'#58b7d9',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000',
+          fill:false
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Hours Worked By Day',
+          fontSize:25,
+          fontFamily:'arial, sans-serif',
+          fontColor:'#cb842c',
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#fff'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+
+
+</script>
+
+
+
+<script src="./dates.js"></script>
+
+  </body>
+</html>

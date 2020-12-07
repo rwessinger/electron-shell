@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'>
+    <link rel="stylesheet" href="stylee.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="login-box">
+      <h1>Login</h1>
+      <form action="./post-login.html">
+        <div class="textbox">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <input type="text" placeholder="Username" name="" value="">
+        </div>
+
+        <div class="textbox">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+          <input type="password" placeholder="Password" name="" value="">
+        </div>
+        <input type="submit" class="btn" name="" value="Sign In" on>
+      </form>
+        <div class="or-span">
+          <p>or</p>
+        </div>
+      <!-- <form action="./signup.html"> -->
+        <!-- <input type="submit" class="btn-two" name="" value="Sign Up"> -->
+        <button class="btn-two" id="modalBtn">Sign Up</button>
+      <!-- </form> -->
+    </div>
+
+    <div class="modal" id="simpleModal">
+      <div class="signup-box">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+        <h1>Sign Up For Free</h1>
+        <!-- <form action="./post-login.html"> -->
+          <div class="textbox">
+            <input type="text" placeholder="Username" name="" value="">
+          </div>
+
+          <div class="textbox">
+            <input type="password" placeholder="Password" name="" value="">
+          </div>
+
+          <div class="textbox">
+            <input type="password" placeholder="Confirm Password" name="" value="">
+          </div>
+
+          <div class="textbox">
+            <input type="text" placeholder="Email Address" name="" value="">
+          </div>
+
+          <div class="textbox">
+            <input type="text" placeholder="First Name" name="" value="">
+          </div>
+
+          <div class="textbox">
+            <input type="text" placeholder="Last Name" name="" value="">
+          </div>
+          <input type="submit" class="btn" name="" value="Sign Up" on>
+        <!-- </form> -->
+      </div>
+    </div>
+  <script src="./modal.js"></script>
+  </body>
+</html>

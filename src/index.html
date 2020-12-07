@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head id='head-tag'>
+  <title>Desktron</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<!-- <body style="-webkit-app-region: drag; border-radius: 5px"> -->
+<body>
+  <div class='titlebar' id='titlebar'>
+    <div class="menu">
+      <div class="menu__file">
+        <h6>File</h6>
+        <div class="menu__file__submenu">
+          <ul>
+            <li>Import</li>
+            <li>Placeholder</li>
+            <li>Placeholder</li>
+            <li>Placeholder</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-line"></div>
+
+      <div class="menu__view">
+        <h6>View</h6>
+        <div class="menu__view__submenu">
+          <ul>
+            <li onclick="toggleDarkMode()">Toggle Dark Mode</li>
+            <li>Placeholder</li>
+            <li>Placeholder</li>
+            <li>Placeholder</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-line"></div>
+
+      <div class="menu__help">
+        <h6>Help</h6>
+        <div class="menu__help__submenu">
+          <ul>
+            <li>About</li>
+            <li>Placeholder</li>
+            <li>Placeholder</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="wc-box">
+      <div class="minimize" id="minimize"></div>
+      <!-- <div class="maximize" id="maximize"></div>
+      <div class="close" id="close"></div> -->
+    </div>
+
+  </div>
+  <div class="main_wrapper">
+    <div class="main__body">
+
+      <div class="main__left">
+      </div>
+
+      <div class="main__right">
+      </div>
+
+
+    </div>
+  </div> <!-- end div main_wrapper -->
+
+    <div class="cancel__div">
+      <button class="cancel__button" id="cancel__button" type="button" onClick="cancelWindow()">Cancel</button>
+    </div>
+
+<script type="text/javascript" src="./boxicons.js"></script>
+<script type="text/javascript" src="./toggle.js"></script>
+<script type="text/javascript" src='./menu_opts.js'></script>
+<script type="text/javascript" src='./cancel.js'></script>
+<script>
+
+ require('./renderer.js')
+
+</script>
+
+
+
+</body>
+
+</html>
